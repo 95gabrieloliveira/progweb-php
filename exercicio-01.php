@@ -14,7 +14,7 @@
     $nome = "Gabriel";
     $cidade = "São Paulo";
     $data = "26/04/2022";
-    $idade = "26 Anos";
+    $idade = 26
 
     echo "<p>$nome</p>";
     echo "<p>$cidade</p>";
@@ -23,7 +23,7 @@
     ?>
 
 
-    <p> Hoje é <?=$data?>. <?=$nome?> tem <?=$idade?> e nasceu em <?=$cidade?> </p>
+    <p> Hoje é <?=$data?>. <?=$nome?> tem <?=$idade?> anos e nasceu na cidade de <?=$cidade?> </p>
 
 </body>
 </html>
