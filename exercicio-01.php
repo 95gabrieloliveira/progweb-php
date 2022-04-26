@@ -13,13 +13,15 @@
     
     $nome = "Gabriel";
     $cidade = "São Paulo";
-    $data = "26/04/2022";
-    $idade = 26
+    /* $data = "26/04/2022"; Segunda opção abaixo */ 
+    $data = date("d/m/Y"); /* Y maiusculo aparece 2022 minusculo 22 */
+/*     $idade = 26  Segunda opção abaixo */
+    $idade = date ("Y") - 1995;
 
-    echo "<p>$nome</p>";
+    /* echo "<p>$nome</p>";
     echo "<p>$cidade</p>";
     echo "<p>$data</p>";
-    echo "<p>$idade</p>";
+    echo "<p>$idade</p>"; *//* Echo pode ser substituido ex <?=$idade?> */
     ?>
 
 
