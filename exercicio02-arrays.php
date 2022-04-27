@@ -14,7 +14,10 @@ Nele, crie dois arrays para armazenar os dados fictícios de duas pessoas difere
 Em seguida, mostre os valores de nome, email e idade de cada pessoa dentro de tags HTML de conteúdo (como article, section, h2, p etc).
 
 Desafio: destaque estes blocos de conteúdo usando CSS. -->
+
 <?php
+
+/* Array Numerico */
 $nome = ["Joyce", "Pedro"];
 
 $idade = [20,12];
@@ -30,6 +33,7 @@ $sexo = ["Feminino","Masculino"];
 
 </section>
 
+<!-- Array Associativo -->
 <?php 
     $pessoas= [
         "nome" => "Joyce",
