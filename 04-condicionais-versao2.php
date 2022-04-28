@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condicionais PHP</title>
+    <title>Condicionais versão 2</title>
 
     <style>
         .aprovado { color: blue; }
@@ -24,7 +24,10 @@
 
     /* Condicional simples somente com if */
     if ($numero > $outroNumero) {
-        echo "<p>$numero é maior que $outroNumero!</p>";
+        ?>
+        <p><?=$numero?> é maior que <?=$outroNumero?>!</p>
+        
+    <?php
     }
 
 
@@ -34,25 +37,33 @@
     $nota1 = 8;
     $nota2 = 4;
     $media = ($nota1 + $nota2) / 2;
-
-    echo "<p>Média: $media</p>";
-
+?>
+  <p>Média: $media</p>
+<?php
 if( $media >= 7) {
-    echo "<p class ='aprovado'>Aprovado</p>"; /* Aspas simples feita para não dar conflito com a aspas anterior */
-} else {
-    echo "<p class = \"reprovado\"> Reprovado </p>"; /* Escape \\ */
+    ?>
+    <p class ='aprovado'>Aprovado</p> 
+    <?php
+} else { 
+    ?>
+   <p class="reprovado"> Reprovado </p> 
+<?php
 }
-
 ?>
 
 <h2>Encadeada</h2>
 <?php
-if ($media >=7) {
-    echo "<p class = \"aprovado\">Aprovado</p>";
+if ($media >=7) { ?>
+    <p class = "aprovado">Aprovado</p>;
+    <?php
 } elseif ($media >= 6 && ($media < 7 )){
-    echo "<p class = \"recuperacao\">Recuperação</p>" ;   
+    ?>
+    <p class = "recuperacao">Recuperação</p>
+    <?php   
 } else {
-    echo "<p class = \"reprovado\"> Reprovado </p>";
+    ?>
+    <p class = "reprovado"> Reprovado </p>
+<?php
 }
 ?>
 
@@ -67,9 +78,10 @@ switch($opcao){
     case 3: $assunto = "Informações"; break;
     default:$assunto = "Falar com um atendente"; break;
 }
-
-echo "<p>$assunto</p>";
 ?>
+
+<p> <?=$assunto?></p>
+
 
 </body>
 </html>
