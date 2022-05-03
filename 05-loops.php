@@ -49,23 +49,99 @@ for ($i =1; $i <=3; $i++ ){
 <p>Crie um array contendo os nomes dos 12 meses do ano</p>
 <p>Usando um loop, faça o nome dos meses aparecer em uma lista ordenada</p>
 
+
+<ol>
 <?php
 
 $meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-$k = 0;
+$k = 0 ;
 do { 
 ?>
     <div>
-       <ol>
+       
            <li>
-            <?=$meses?>
+            <?=$meses[$k]?>
            </li>
-       </ol>
+       
     </div>
     <?php
 $k++;
-} while($k <=12);
+} while($k <12);
+?>
+</ol>
+
+<!-- ****** CORREÇÃO ********************* -->
+
+<!-- // Lista OL Iniciada e termina independentemente do PHP -->
+<ol> <!-- Ideal colocar o for antes do for para a contagem acontecer -->
+<?php
+    $meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+    for($i = 0; $i < count($meses); $i++) {
+        /* Itens da lista dependem do PHP For */
+        ?>
+        
+            <li> <?=$meses[$i]?></li>
+       
+<?php    
+    }
+
+?>
+ </ol>
+<!-- Lista OL e LI inicia e termina dependendo do PHP -->
+
+<?php
+    $meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+// Lista OL Iniciada e termina independentemente do PHP
+    for($i = 0; $i < count($meses); $i++) {
+        /* Itens da lista dependem do PHP For */
+        ?>
+        <ol> <!-- Errada -->
+            <li> <?=$meses[$i]?></li>
+        </ol>
+<?php    
+    }
+
+?>
+
+
+<h2>Foreach (Para cada)</h2>
+<!-- Exclusivo para arrays -->
+    <ol>
+        <?php foreach($meses as $mes){ ?> <!-- "as" mesma coisa que como -->
+        <li><?=$mes?></li>
+       <?php }        
+        ?>
+    </ol>
+
+
+<?php
+// Array associativo (Formados por partes de chave =>valor)
+   
+    $curso= [
+        //chave = (key)  => Valor (value)
+        "nome" => "Programador Web",
+        "carga_horaria" => 240,
+        "unidade" => "Penha",
+        "ucs" => 5
+    ];
+
+/*     foreach ($curso as $key => $value) {
+        ?>
+        <p><?=$value?> </p>
+    
+    <?php
+    } */
+
+    foreach ($curso as $chaves => $valores) {
+        ?>
+        <p><?=$valores?> </p>
+    
+    <?php
+    }
+
+
 ?>
 </body>
 </html>
