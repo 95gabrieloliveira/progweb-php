@@ -13,11 +13,11 @@
     <form action="processa.php" method="post">
         <p>
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome">
+            <input required type="text" name="nome" id="nome">
         </p>
         <p>
             <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email">
+            <input required type="email" name="email" id="email">
         </p>
         <p>
             <label for="idade">Idade:</label>
@@ -43,8 +43,8 @@
             <input type="radio" name="informativos" id="sim" value="sim">
             <label for="sim">Sim</label>
             
-            <input type="radio" name="informativos" id="nao" value="não">
-            <label for="nao">Não</label>
+            <input checked type="radio" name="informativos" id="nao" value="não">
+            <label  for="nao">Não</label>
         </div>
 
         <p>
