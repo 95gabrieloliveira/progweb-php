@@ -30,7 +30,7 @@
       /* Se existir o $_POST["interesses"] o que for selecionado fica na variavel. Caso contário,
       deixe um array vazio na variavel.*/
       $interesses = $_POST["interesses"] ?? [];
-      /* ?? chamase operador de coalescencia nula */
+      /* ?? chama se operador de coalescencia nula */
       $informativos = $_POST["informativos"];
       $mensagem = $_POST["mensagem"];
     ?>
