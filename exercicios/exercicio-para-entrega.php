@@ -12,7 +12,7 @@
     <h1>Exercicio para entrega dia 16/05</h1>
     <hr>
 
-    <form action="exercicio-para-entrega.php" method="POST">
+    <form action="exercicio-16-05.php" method="POST">
     <p>
         <label for="nome-produto">Nome do Produto:</label>
         <input required type="text" name="nome-produto" id="nome-produto">
@@ -61,14 +61,9 @@ Trabalha junto com os atributos min e max para limitar os incrementos em que val
 
     </form>
     
-    <?php
-    if(isset($_POST['enviar'])):
-    $erros = array ();
-    
-    $nome = filter_input (INPUT_POST,'nome-produto', FILTER_SANITIZE_SPECIAL_CHARS);
-        
+ 
+
    
-    endif;
-    ?>
+
 </body>
 </html>
